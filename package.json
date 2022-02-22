@@ -1,0 +1,31 @@
+{
+    "name": "summer",
+    "displayName": "summer",
+    "description": "The summer color palette for visual studio code!",
+    "version": "0.1.0",
+    "repository": "https://github.com/JhonnyRice/summer-vscode",
+	"publisher": "JhonnyRice",
+	"license": "MIT",
+    "icon": "summer.png",
+    "keywords": [
+		"theme",
+		"summer",
+		"tropical",
+		"contrast"
+	],
+    "engines": {
+        "vscode": "^1.64.0"
+    },
+    "categories": [
+        "Themes"
+    ],
+    "contributes": {
+        "themes": [
+            {
+                "label": "Summer",
+                "uiTheme": "vs-dark",
+                "path": "./themes/Summer-color-theme.json"
+            }
+        ]
+    }
+}
