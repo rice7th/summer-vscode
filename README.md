@@ -2,4 +2,4 @@
 ### A fresh color palette for visual studio code
 ---
 Summer is a color palette created for vibrant color enjoyers.
-You can find the github repo with color configs for other apps too [HERE]("https://www.github.com/JhonnyRice/summer")
+You can find the github repo with color configs for other apps too [HERE](https://www.github.com/JhonnyRice/summer)
