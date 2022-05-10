@@ -43,19 +43,74 @@
 
 	},
 	"tokenColors": [
+		{ // Preprocessor stuff
+			"name": "C++ include",
+			"scope": [
+			  "keyword.control.directive.include.cpp",
+			  "keyword.control.directive.define.cpp",
+			  "punctuation.definition.directive.cpp",
+			  "keyword.control.directive.conditional.cpp"
+			],
+			"settings": {
+			  "foreground": "#AD4ED2"
+			}
+		},
+		{
+			"name": "C preprocessors",
+			"scope": [
+			  "keyword.control.directive.include.c",
+			  "keyword.control.directive.define.c",
+			  "punctuation.definition.directive.c",
+			  "keyword.control.directive.conditional.c"
+			],
+			"settings": {
+			  "foreground": "#AD4ED2"
+			}
+		},
+		{
+			"name": "Rust Namespace Rust Modules Rust Attributes",
+			"scope": [
+				"entity.name.namespace.rust",
+				"entity.name.module.rust",
+				"meta.attribute.rust"
+			],
+			"settings": {
+				"foreground": "#AD4ED2",
+			}
+		},
 		{
 			"name": "Comment",
 			"scope": [
 				"comment",
-				"punctuation.definition.comment"
+				"punctuation.definition.comment",
+				"invalid.deprecated.semicolon.python" // Ignored as comments, aren't they?
 			],
 			"settings": {
 				"fontStyle": "italic",
 				"foreground": "#626861"
 			}
 		},
-
-
+		{
+			"name": "Rust Lifetimes",
+			"scope": [
+				"entity.name.type.lifetime.rust",
+				"punctuation.definition.lifetime.rust"
+			],
+			"settings": {
+				"foreground": "#277AB6"
+			}
+		},
+		{
+			"name": "Macros",
+			"scope": [
+				"meta.macro.rust",
+				"entity.name.function.macro.rust",
+				"entity.name.function.preprocessor.c"
+			],
+			"settings": {
+				"foreground": "#DF7C2C"
+			}
+		},
 		{
 			"name": "Variables",
 			"scope": [
@@ -63,7 +118,8 @@
 				"string constant.other.placeholder"
 			],
 			"settings": {
-				"foreground": "#DF7C2C"
+				//"foreground": "#DF7C2C"
+				"foreground": "#D8E2E1"
 			}
 		},
 		{
@@ -86,33 +142,14 @@
 			}
 		},
 		{
-			"name": "Keyword, Storage",
+			"name": "Strings",
 			"scope": [
-				"keyword",
-				"keyword.control",
-				"storage.type",
-				"storage.modifier"
+			  "string.quoted",
+			  "string.template",
+			  "punctuation.definition.string"
 			],
 			"settings": {
-				"foreground": "#32B5C7"
-			}
-		},
-
-		{
-			"name": "String, Symbols, Inherited Class, Markup Heading",
-			"scope": [
-				"string",
-				"string.quoted.single",
-				"string.quoted.double",				
-				"constant.other.symbol",
-				"constant.other.key",
-				"entity.other.inherited-class",
-				"markup.heading",
-				"markup.inserted.git_gutter",
-				"meta.group.braces.curly constant.other.object.key.js string.unquoted.label.js"
-			],
-			"settings": {
-				"foreground": "#7CBD27"
+			  "foreground": "#7CBD27"
 			}
 		},
 		{
@@ -121,6 +158,7 @@
 
 				"constant.other.color",
 				"meta.tag",
+				"punctuation.separator.key-value",
 				"punctuation.definition.tag",
 				"punctuation.separator.inheritance.php",
 				"punctuation.definition.tag.html",
@@ -130,9 +168,32 @@
 				"punctuation.separator.comma",
 				"keyword.other.template",
 				"keyword.other.substitution",
+				"punctuation.section.arguments.begin.bracket.round.c", // I dont know anymore...
+				"punctuation.section.arguments.end.bracket.round.c", // I HAVE NO WORDS!
+				"meta.block.c", // M whats this?
+				"punctuation.definition.arguments.begin.python", // SAME FOR PYTHON WHAT THE HECK
+				"punctuation.definition.arguments.end.python",
+				"meta.function-call.arguments.python", // In python even function calls are broken!
+				"meta.brace.round.js", // Same for inline JS in an HTML attribute!
+				"punctuation.definition.block.js",
+				"meta.brace.square.js",
+				"punctuation.brackets.round.rust",
+				"punctuation.brackets.curly.rust",
+				"punctuation.brackets.square.rust",
 			],
 			"settings": {
 				"foreground": "#D8E2E1"
+			}
+		},
+		{
+			"name": "Special operator",
+			"scope": [
+			  "keyword.operator.new",
+			  "keyword.operator.expression",
+			  "keyword.operator.logical"
+			],
+			"settings": {
+			  "foreground": "#32B5C7"
 			}
 		},
 		{
@@ -153,6 +214,9 @@
 				"meta.function-call",
 				"variable.function",
 				"support.function",
+				"meta.function-call.generic.python",
+				"source.elixir entity.name.function",
+				"source.go meta.function-call.go",
 				"keyword.other.special-method"
 			],
 			"settings": {
@@ -179,7 +243,22 @@
 			}
 		},
 		{
-			"name": "Number, Constant, Function Argument, Tag Attribute, Embedded",
+			"name": "Keyword, Storage",
+			"scope": [
+				"keyword",
+				"keyword.control",
+				"storage.type",
+				"storage.modifier",
+				"entity.name.tag.html", // html tags are like Keywords
+				//"keyword.other.unit", // i prefer these two green instead of normal keywords
+				//"keyword.other"
+			],
+			"settings": {
+				"foreground": "#32B5C7"
+			}
+		},
+		{
+			"name": "Number, Constant, Function Argument, Other keyword, Tag Attribute, Embedded",
 			"scope": [
 				"constant.numeric",
 				"constant.language",
@@ -280,7 +359,7 @@
 				"entity.other.attribute-name"
 			],
 			"settings": {
-				"foreground": "#AD4ED2"
+				"foreground": "#41A36F"
 			}
 		},
 		{
@@ -291,7 +370,7 @@
 			],
 			"settings": {
 				"fontStyle": "italic",
-				"foreground": "#AD4ED2"
+				"foreground": "#41A36F"
 			}
 		},
 		{
