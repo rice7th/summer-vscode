@@ -2,7 +2,7 @@
     "name": "summer",
     "displayName": "summer",
     "description": "The summer color palette for visual studio code!",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "repository": "https://github.com/JhonnyRice/summer-vscode",
 	"publisher": "JhonnyRice",
 	"license": "MIT",
