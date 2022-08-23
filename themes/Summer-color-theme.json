@@ -72,7 +72,7 @@
 			"scope": [
 				"entity.name.namespace.rust",
 				"entity.name.module.rust",
-				"meta.attribute.rust"
+				"meta.attribute.rust",
 			],
 			"settings": {
 				"foreground": "#AD4ED2",
@@ -146,7 +146,8 @@
 			"scope": [
 			  "string.quoted",
 			  "string.template",
-			  "punctuation.definition.string"
+			  "punctuation.definition.string",
+			  "string.docstring.julia"
 			],
 			"settings": {
 			  "foreground": "#7CBD27"
